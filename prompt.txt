@@ -1,0 +1,34 @@
+Bạn là một Business Analyst (BA) chuyên nghiệp trong lĩnh vực Fintech/Banking. Hãy đóng vai trò là Senior BA của ngân hàng ABC Bank để viết một tài liệu Đặc tả phần mềm (SRS) hoàn chỉnh theo chuẩn IEEE cho tính năng eKYC (Định danh điện tử khách hàng), phục vụ việc handover cho đội ngũ Development và QA. 
+
+Dưới đây là thông tin nghiệp vụ thu thập được từ Bài tập 01 (Scope đã được Ban Giám Đốc phê duyệt):
+đọc file "ss12-ex1-tranducanh-n24dtcn003.md" để lấy nội dung
+
+Hãy xây dựng tài liệu SRS chi tiết, chuyên nghiệp theo đúng cấu trúc bắt buộc sau đây:
+
+Phần 1: Introduction (Giới thiệu chung)
+- Purpose: Mục đích của tài liệu SRS này đối với Dev và QA.
+- Scope: Phạm vi của hệ thống eKYC tại ABC Bank.
+- Definitions, Acronyms, and Abbreviations: Định nghĩa rõ ràng các thuật ngữ kỹ thuật liên quan bao gồm: eKYC, OCR, Liveness Check, Face Matching, SDK, API.
+
+Phần 2: Overall Description (Mô tả tổng quan)
+- Product Perspective: Góc nhìn sản phẩm trong hệ sinh thái Mobile Banking của ABC Bank.
+- User Classes and Characteristics: Đặc điểm các nhóm người dùng (Khách hàng vãng lai, Hệ thống Core Banking, Nhân viên hậu kiểm Back-office nếu có).
+- Constraints: Các giới hạn bắt buộc về Luật pháp (Nghị định bảo vệ dữ liệu cá nhân, quy định Ngân hàng Nhà nước) và Công nghệ (Camera smartphone, chất lượng mạng).
+
+Phần 3: Specific Functional Requirements (Yêu cầu chức năng chi tiết)
+Viết đặc tả chi tiết (gồm Mô tả, Luồng xử lý chính - Main flow, Luồng ngoại lệ - Exception flow) cho 4 module:
+1. Module Đăng ký tài khoản (Nhập SĐT, OTP, Email).
+2. Module Upload & Đọc CCCD (Tính năng OCR trích xuất text, check giấy tờ thật/giả).
+3. Module Xác thực khuôn mặt (Liveness Check chống giả mạo bằng ảnh/video, Face Matching so khớp với CCCD).
+4. Module Kích hoạt tài khoản (Phê duyệt tự động, đồng bộ dữ liệu sang Core Banking, thông báo User).
+
+Phần 4: Non-Functional Requirements (Yêu cầu phi chức năng)
+Chỉ rõ các tiêu chuẩn kỹ thuật định lượng cho:
+- Security: Bảo mật dữ liệu cá nhân (Mã hóa lưu trữ AES, mã hóa đường truyền SSL/TLS, tokenization).
+- Performance: Thời gian phản hồi của các API OCR/Liveness Check, thời gian hoàn thành 1 lượt eKYC.
+- Availability: Tính sẵn sàng của hệ thống (Ví dụ: Uptime 99.9%, khả năng chịu tải đồng thời).
+
+Phần 5: Visual Diagram (Sơ đồ trực quan)
+- Hãy tạo mã Mermaid (Mermaid code) cho sơ đồ Use Case Diagram mô tả đầy đủ các Actor (User, System, Third-party API) và luồng thao tác của các module trên. Đảm bảo mã Mermaid tường minh, đúng cú pháp để có thể render trực tiếp.
+
+Yêu cầu về văn phong: Sử dụng ngôn ngữ kỹ thuật chuẩn mực, rõ ràng, mạch lạc, cấu trúc dạng Markdown có lồng bullet-point để Dev và QA dễ dàng thiết kế hệ thống và viết Test Cases. lưu ở "ss12-ex2-tranducanh-n24dtcn003.md"
